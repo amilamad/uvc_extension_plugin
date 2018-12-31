@@ -1,0 +1,34 @@
+// IExtensionUnit interface
+import "unknwn.idl";
+[
+   object,
+   local,
+   uuid(563F972D-EAA1-46AA-9502-A94035A59626),
+   pointer_default(unique)
+]
+interface IExtensionUnit : IUnknown
+{
+   HRESULT get_InfoSize(
+      [out] ULONG *pulSize);
+   HRESULT get_Info(
+      [in] ULONG ulSize,
+      [in, out, size_is(ulSize)] BYTE pInfo[]);
+   HRESULT get_PropertySize(
+      [in] ULONG PropertyId,
+      [out] ULONG *pulSize);
+ HRESULT get_Property(
+      [in] ULONG PropertyId,
+      [in] ULONG ulSize,
+      [in, out, size_is(ulSize)] BYTE pValue[]);
+   HRESULT put_Property(
+      [in] ULONG PropertyId,
+      [in] ULONG ulSize,
+      [in, out, size_is(ulSize)] BYTE pValue[]);
+   HRESULT get_PropertyRange(
+      [in] ULONG PropertyId,
+      [in] ULONG ulSize,
+      [in, out, size_is(ulSize)] BYTE pMin[],
+      [in, out, size_is(ulSize)] BYTE pMax[],
+      [in, out, size_is(ulSize)] BYTE pSteppingDelta[],
+      [in, out, size_is(ulSize)] BYTE pDefault[]);
+};

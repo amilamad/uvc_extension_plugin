@@ -1,0 +1,20 @@
+HKLM
+{
+    NoRemove SYSTEM
+    {
+        NoRemove CurrentControlSet
+        {
+            NoRemove Control
+            {
+                NoRemove NodeInterfaces
+                {
+                    ForceRemove {7CA138CF-71F2-4EC5-8D4C-F087741CABAE} = s 'Extension Unit Property Set'
+                    {
+                        val IID = b '2D973F56A1EAAA469502A94035A59626'
+					    val CLSID = b 'F51107916D7EF34188DD653782619EDB'
+                    }
+                }
+            }
+        }
+    }
+}

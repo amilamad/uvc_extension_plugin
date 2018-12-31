@@ -1,0 +1,19 @@
+TARGETNAME= uvcxuplgn
+TARGETTYPE= DYNLINK
+TARGETPATH= obj
+TARGETEXT=  ax
+
+DLLENTRY=_DllMainCRTStartup
+DLLBASE=0x10080000
+USE_MSVCRT=1
+
+USE_STATIC_ATL=1
+USER_INCLUDES= $(O)
+
+INCLUDES=
+
+#SOURCES = interface.idl uvcxuplgn.cpp stdafx.cpp interface_i.c xuproxy.cpp
+
+SOURCES = interface.idl uvcxuplgn.cpp stdafx.cpp interface_i.c xuproxy.cpp
+
+TARGETLIBS= $(SDK_LIB_PATH)\kernel32.lib $(SDK_LIB_PATH)\user32.lib $(SDK_LIB_PATH)\gdi32.lib $(SDK_LIB_PATH)\advapi32.lib $(SDK_LIB_PATH)\comdlg32.lib $(SDK_LIB_PATH)\ole32.lib $(SDK_LIB_PATH)\oleaut32.lib $(SDK_LIB_PATH)\uuid.lib $(SDK_LIB_PATH)\comctl32.lib
