@@ -7,4 +7,4 @@ Change directory in the source code
 Use Build -cZg to build 
 
 Keywords
-Winodws, Win32, DDK, WDK, UVC, USB video class, C, C++
+Windows, Win32, DDK, WDK, UVC, USB video class, C, C++
